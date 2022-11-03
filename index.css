@@ -7,5 +7,122 @@
 }
 
 :root {
-    
+    --clr-soft-orange: hsl(35, 77%, 62%);
+    --clr-soft-red: hsl(5, 85%, 63%);
+
+    --clr-off-white: hsl(36, 100%, 99%);
+    --clr-grayish-blue: hsl(233, 8%, 79%);
+    --clr-dark-gray-blue: hsl(236, 13%, 42%);
+    --clr-very-dark-blue: hsl(240, 100%, 5%);
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--clr-off-white);
+    padding: 1rem 2rem;
+}
+
+.hamburger {
+    display: block;
+    position: relative;
+    z-index: 1;
+    user-select: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 2rem;
+    height: 0.25rem;
+    margin-bottom: 0.313rem;
+    position: relative;
+
+    background-color: var(--clr-very-dark-blue);
+    border-radius: 0.313rem;
+    z-index: 1;
+    transform-origin: 0 0;
+    transition: 0.4s;
+}
+
+.hamburger:hover span:nth-child(2){
+    transform: translateX(10px);
+    background-color: var(--clr-soft-red);
+}
+
+.hamburger .is-active span:nth-child(1){
+    transform: translate(0px, -2px) rotate(45deg);
+}
+
+.hamburger .is-active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(15px);
+}
+
+.hamburger .is-active span:nth-child(3) {
+    transform: translate(-3px, 3px) rotate(-45deg);
+}
+
+.hamburger .is-active:hover span {
+    background-color: var(--clr-very-dark-blue);
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    min-height: 100vh;
+    display: block;
+    background-color: var()--clr-off-white;
+    padding-top: 7.5rem;
+    transition: 0.4s;
+}
+
+@supports (backdrop-filter: blur(0.5rem)) {
+    .mobile-nav {
+        background-color: hsl(0 0% 100% / 0.1);
+        backdrop-filter: blur(0.5rem);
+    }
+}
+
+.mobile-nav .is-active {
+    left: 0;
+}
+
+.mobile-nav a {
+    display: flex;
+    width: 100%;
+    max-width: 12.5rem;
+    margin: 0 auto 1rem;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    background-color: var(--clr-grayish-blue);
+}
+
+.mobile-nav a:hover {
+    color: var(--clr-soft-orange);
 }
