@@ -20,6 +20,11 @@ body {
     font-family: "Inter", sans-serif;
     font-size: 15px;
     background-color: var(--clr-off-white);
+    margin: 0 1rem;
+}
+
+img {
+    max-width: 100%;
 }
 
 a {
@@ -32,11 +37,11 @@ nav {
     left: 0;
     right: 0;
     background-color: var(--clr-off-white);
-    padding: 1rem 2rem;
+    padding: 1rem;
 }
 
-.nav-container {
-    max-width: 1280px;
+.container {
+    max-width: 1115px;
     margin: 1rem auto;
     display: flex;
     align-items: flex-end;
@@ -126,7 +131,7 @@ nav {
     margin: 0 auto 1rem;
     text-align: center;
     padding: 0.75rem 1rem;
-    background-color: var(--clr-very-dark-blue);
+    background-color: var(--clr-grayish-blue);
 }
 
 .mobile-nav a:hover {
@@ -141,12 +146,30 @@ nav {
 }
 
 .menu a {
-    color: var(--clr-very-dark-blue);
+    color: var(--clr-dark-gray-blue);
     margin:  0 1rem;
     font-weight: 400;
     text-decoration: none;
     transform: 0.8s;
     padding: 0.5rem 0.5rem;
+}
+
+.featured-section h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--clr-very-dark-blue);
+    margin-right: 6rem;
+    margin-bottom: 1rem;
+}
+
+.featured-section p {
+    color: var(--clr-dark-gray-blue);
+    margin-bottom: 1.25rem;
+}
+
+.featured-section .btn-read-more {
+    color: var(--clr-off-white);
+    background-color: var(--clr-soft-red);
 }
 
 @media (min-width: 768px) {
