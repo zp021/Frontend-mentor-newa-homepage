@@ -38,10 +38,11 @@ nav {
     right: 0;
     background-color: var(--clr-off-white);
     padding: 1rem;
+    z-index: 9;
 }
 
 .container {
-    max-width: 1115px;
+    max-width: 69.688rem;
     margin: 1rem auto;
     display: flex;
     align-items: flex-end;
@@ -66,38 +67,39 @@ nav {
 
 .hamburger span {
     display: block;
-    width: 2rem;
+    width: 2.063rem;
     height: 0.25rem;
     margin-bottom: 0.313rem;
     position: relative;
 
     background-color: var(--clr-very-dark-blue);
-    border-radius: 0.313rem;
+    border-radius: 0.375rem;
     z-index: 1;
+
     transform-origin: 0 0;
     transition: 0.4s;
 }
 
 .hamburger:hover span:nth-child(2){
-    transform: translateX(10px);
+    transform: translateX(0.625rem);
     background-color: var(--clr-soft-red);
 }
 
-.hamburger .is-active span:nth-child(1){
-    transform: translate(0px, -2px) rotate(45deg);
+.hamburger.is-active span:nth-child(1){
+    transform: translate(0px, -0.125rem) rotate(45deg);
 }
 
-.hamburger .is-active span:nth-child(2) {
+.hamburger.is-active span:nth-child(2){
     opacity: 0;
-    transform: translateX(15px);
+    transform: translateX(0.938rem);
 }
 
-.hamburger .is-active span:nth-child(3) {
-    transform: translate(-3px, 3px) rotate(-45deg);
+.hamburger.is-active span:nth-child(3){
+    transform: translate(-0.188rem, 0.188rem) rotate(-45deg);
 }
 
-.hamburger .is-active:hover span {
-    background-color: var(--clr-very-dark-blue);
+.hamburger.is-active:hover span{
+    background-color: var(--clr-soft-red);
 }
 
 .mobile-nav {
@@ -107,36 +109,42 @@ nav {
     width: 100%;
     min-height: 100vh;
     display: block;
-    background-color: var(--clr-off-white);
+    z-index: 8;
+    background: hsl(0 0% 0% / 0.5);
     padding-top: 7.5rem;
     transition: 0.4s;
-    z-index: 10;
 }
 
 @supports (backdrop-filter: blur(0.5rem)) {
     .mobile-nav {
-        background-color: hsl(0 0% 100% / 0.1);
+        background: hsl(0 0% 100% / 0.1);
         backdrop-filter: blur(0.5rem);
     }
 }
 
-.mobile-nav .is-active {
+.mobile-nav.is-active {
     left: 0;
 }
 
 .mobile-nav a {
-    display: flex;
+    display: block;
     width: 100%;
     max-width: 12.5rem;
-    margin: 0 auto 1rem;
+    margin: 0 auto 2rem;
     text-align: center;
-    padding: 0.75rem 1rem;
-    background-color: var(--clr-grayish-blue);
+    padding: 1rem 1rem;
+    background-color: var(--clr-very-dark-blue);
+
+    color: var(--clr-off-white);
+    font-weight: 700;
+    text-decoration: none;
 }
 
 .mobile-nav a:hover {
-    color: var(--clr-soft-orange);
+    color: var(--clr-soft-red);
+    cursor: pointer;
 }
+
 
 .menu {
     display: none;
@@ -147,12 +155,18 @@ nav {
 
 .menu a {
     color: var(--clr-dark-gray-blue);
-    margin:  0 1rem;
+    margin: 0 1rem;
     font-weight: 400;
     text-decoration: none;
     transform: 0.8s;
     padding: 0.5rem 0.5rem;
+    border-radius: 99px;
 }
+
+.menu a:hover {
+    color: var(--clr-soft-red);
+}
+
 
 .featured-section h1 {
     font-size: 2rem;
