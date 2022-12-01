@@ -281,3 +281,19 @@ nav {
         display: flex;
     }
 }
+
+@media (min-width: 960px) {
+    main {
+        margin: 0 6rem;
+    }
+
+    nav {
+        margin-top: 3rem;
+    }
+
+    .top {
+        display: flex;
+        flex-direction: row;
+    }
+
+}   
