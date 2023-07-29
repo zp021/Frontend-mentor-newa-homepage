@@ -296,4 +296,13 @@ nav {
         flex-direction: row;
     }
 
+    .featured-section {
+        width: 55rem;
+    }
+
+    .top-3-section {
+        display: flex;
+        flex-direction: row;
+    }
+
 }   
