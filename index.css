@@ -297,7 +297,28 @@ nav {
     }
 
     .featured-section {
+        display: flex;
+        flex-direction: column;
         width: 55rem;
+    }
+    
+    .featured-section h1 {
+        font-size: 3rem;
+    }
+
+    .btn-read-more {
+        width: 14rem;
+        margin-left: 18rem;
+    }
+
+    .featured-section-text {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .new-section {
+        margin-top: 9rem;
+        margin-left: 2rem;
     }
 
     .top-3-section {
